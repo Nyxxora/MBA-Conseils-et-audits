@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB&A Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo MB&A">
+            <div class="logo-text">MB&A</div>
+        </div>
+        <div class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="Particulier.html">Particulier</a>
+            <a href="Professionnel.html">Professionnel</a>
+            <a href="Qui-sommes-nous.html">Qui sommes-nous ?</a>
+            <a href="Formulaire-de-contact.html" class="active">Formulaire de contact</a>
+        </div>
+    </div>
+    <div class="calendar">
+        <div class="calendar-header">
+            <span id="month-year"></span>
+        </div>
+        <div class="calendar-weekdays">
+            <div>Dim</div>
+            <div>Lun</div>
+            <div>Mar</div>
+            <div>Mer</div>
+            <div>Jeu</div>
+            <div>Ven</div>
+            <div>Sam</div>
+        </div>
+        <div class="calendar-days" id="calendar-days">
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 10px;">
+        <button id="prev-month">&lt;</button>
+        <span id="month-year"></span>
+        <button id="next-month">&gt;</button>
+    </div>
+
+    <!-- Formulaire de contact -->
+    <div class="form-container">
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="telephone">Numéro de téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" required>
+                <small>Format : 10 chiffres sans espaces ni caractères spéciaux.</small>
+            </div>
+            <div class="form-group">
+                <label for="heure">Heure du rendez-vous :</label>
+                <input type="time" id="heure" name="heure" min="08:00" max="18:00" step="3600" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Envoyer</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="Calendrier_java.js"></script>
+</body>
+</html>

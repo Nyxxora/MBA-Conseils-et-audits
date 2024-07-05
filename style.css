@@ -1,0 +1,222 @@
+/* Style CSS pour le document */
+body {
+    font-family: Arial, sans-serif;/* Utiliser la police Arial avec une alternative sans-serif */
+    margin: 0;/* Supprimer la marge par défaut */
+    padding: 0;/* Supprimer le padding par défaut */
+    background-color: #f0f0f0;/* Définir une couleur de fond gris clair */
+}
+.header {
+    background-color: #043343;/* Définir une couleur de fond bleu foncé pour l'en-tête */
+    padding: 10px 20px;/* Ajouter un padding interne de 10px en haut et en bas, et 20px à gauche et à droite */
+    display: flex;/* Utiliser un conteneur flexbox pour aligner les éléments */
+    justify-content: space-between;/* Espacer les éléments flexbox de manière égale */
+    align-items: center;/* Aligner les éléments flexbox au centre verticalement */
+    border-radius: 15px;/* Arrondir les bords de l'en-tête */
+    margin: 2px;/* Ajouter une marge externe de 2px autour de l'en-tête */
+}
+.logo-container {
+    display: flex;/* Utiliser un conteneur flexbox pour aligner les éléments */
+    align-items: center;/* Aligner les éléments flexbox au centre verticalement */
+}
+.logo-container img {
+    height: 70px;/* Définir la hauteur de l'image du logo */
+    margin-right: 30px;/* Ajouter un espace de 30px à droite de l'image */
+}
+.logo-text {
+    color: #B99581;/* Définir la couleur du texte du logo */
+    font-size: 54px;/* Définir la taille de la police du texte du logo */
+    font-weight: bold;/* Définir le texte en gras */
+}
+.nav {
+    display: flex;/* Utiliser un conteneur flexbox pour aligner les éléments */
+    gap: 80px;/* Ajouter un espace de 80px entre chaque élément de la navigation */
+}
+.nav a {
+    color: #B99581;/* Définir la couleur du texte des liens de navigation */
+    text-decoration: none;/* Supprimer la décoration de texte (soulignement) */
+    font-size: 18px;/* Définir la taille de la police des liens de navigation */
+    padding: 10px 10px;/* Ajouter un padding interne de 10px en haut et en bas, et 30px à gauche et à droite */
+    border-radius: 20px;/* Arrondir les bords des liens de navigation */
+}
+/* Style pour le lien actif */
+.nav a.active {
+    background-color: #F8F8F8;/* Définir une couleur de fond pour le lien actif */
+    color: #B99581;/* Définir la couleur du texte pour le lien actif */
+}
+.main {
+    padding: 20px;/* Ajouter un padding interne de 20px */
+}
+.main h1 {
+    font-size: 24px;/* Définir la taille de la police pour les titres principaux */
+    color: #043343;/* Définir la couleur du texte pour les titres principaux */
+    text-align: center;
+}
+.main h2 {
+    font-size: 24px;/* Définir la taille de la police pour les titres principaux */
+    color: #043343;/* Définir la couleur du texte pour les titres principaux */
+    text-align: left;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.main p {
+    font-size: 14px;/* Définir la taille de la police pour les paragraphes */
+    line-height: 1.6;/* Définir la hauteur de ligne pour les paragraphes */
+    color: #0a0a0a;/* Définir la couleur du texte pour les paragraphes */
+    margin-top: 10px;/* Ajouter une marge supérieure de 20px */
+    margin-left: 300px;
+    margin-right: 300px;
+    text-align: justify;
+}
+.photo-container {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement les images */
+    margin-top: 20px;
+}
+.photo-container img {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.main img {
+    max-width: 100%;/* Définir la largeur maximale de l'image à 100% de son conteneur */
+    height: auto;/* Ajuster automatiquement la hauteur pour conserver les proportions */
+}
+.calendar {
+    max-width: 600px;/* Définir la largeur maximale du calendrier à 600px */
+    margin: 20px auto;/* Centrer le calendrier horizontalement et ajouter une marge de 20px en haut et en bas */
+    background-color: #fff;/* Définir la couleur de fond du calendrier */
+    border-radius: 8px;/* Arrondir les bords du calendrier */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);/* Ajouter une ombre autour du calendrier */
+    padding: 20px;/* Ajouter un padding interne de 20px */
+}
+.calendar-header {
+    text-align: center;/* Centrer le texte de l'en-tête du calendrier */
+    font-size: 24px;/* Définir la taille de la police de l'en-tête du calendrier */
+    margin-bottom: 10px;/* Ajouter une marge inférieure de 10px */
+}
+.calendar-weekdays {
+    display: flex;/* Utiliser un conteneur flexbox pour aligner les éléments */
+    justify-content: space-between;/* Espacer les éléments flexbox de manière égale */
+    font-weight: bold;/* Définir le texte en gras */
+    border-bottom: 1px solid #ccc;/* Ajouter une bordure inférieure grise et fine */
+    padding-bottom: 5px;/* Ajouter un padding interne de 5px en bas */
+    margin-bottom: 10px;/* Ajouter une marge inférieure de 10px */
+}
+.calendar-weekdays div {
+    width: calc(100% / 7);/* Définir la largeur de chaque jour de la semaine à 1/7 de la largeur totale */
+    text-align: center;/* Centrer le texte des jours de la semaine */
+}
+.calendar-days {
+    display: grid;/* Utiliser une grille pour organiser les jours du calendrier */
+    grid-template-columns: repeat(7, 1fr);/* Définir 7 colonnes de largeur égale */
+    gap: 10px;/* Ajouter un espace de 10px entre les jours */
+}
+.calendar-day {
+    padding: 10px;/* Ajouter un padding interne de 10px */
+    border-radius: 5px;/* Arrondir les bords des jours du calendrier */
+    cursor: pointer;/* Changer le curseur en pointeur pour indiquer que c'est cliquable */
+    transition: background-color 0.3s ease;/* Ajouter une transition pour l'effet de survol */
+}
+.calendar-day:hover {
+    background-color: #f0f0f0;/* Changer la couleur de fond lors du survol */
+}
+/* Styles pour la réactivité */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;/* Passer à une disposition en colonne */
+        text-align: center;/* Centrer le texte de l'en-tête */
+    }
+    .nav {
+        flex-direction: column;/* Passer à une disposition en colonne */
+        gap: 20px;/* Réduire l'espace entre les éléments de navigation */
+        margin-top: 10px;/* Ajouter une marge supérieure de 10px */
+    }
+    .logo-text {
+        font-size: 36px;/* Réduire la taille de la police du texte du logo */
+    }
+    .nav a {
+        font-size: 16px;/* Réduire la taille de la police des liens de navigation */
+        padding: 8px 20px;/* Réduire le padding interne des liens de navigation */
+    }
+    .calendar {
+        padding: 10px;/* Réduire le padding interne du calendrier */
+    }
+    .calendar-weekdays {
+        flex-direction: column;/* Passer à une disposition en colonne pour les jours de la semaine */
+    }
+    .calendar-days {
+        grid-template-columns: repeat(4, 1fr);/* Passer à une grille de 4 colonnes pour les jours du calendrier */
+    }
+}
+@media (max-width: 480px) {
+    .logo-container img {
+        height: 50px;/* Réduire la hauteur de l'image du logo */
+        margin-right: 15px;/* Réduire l'espace à droite de l'image */
+    }
+    .logo-text {
+        font-size: 24px;/* Réduire la taille de la police du texte du logo */
+    }
+    .nav {
+        gap: 10px;/* Réduire l'espace entre les éléments de navigation */
+    }
+    .nav a {
+        font-size: 14px;/* Réduire la taille de la police des liens de navigation */
+        padding: 6px 10px;/* Réduire le padding interne des liens de navigation */
+    }
+    .calendar-days {
+        grid-template-columns: repeat(2, 1fr);/* Passer à une grille de 2 colonnes pour les jours du calendrier */
+    }
+}
+/* Nouveaux styles pour le sélecteur d'heure */
+#time-selection {
+    font-size: 16px; /* Taille de la police pour le sélecteur d'heure */
+    padding: 8px; /* Padding interne pour le sélecteur d'heure */
+    border: 1px solid #ccc; /* Bordure fine autour du sélecteur d'heure */
+    border-radius: 5px; /* Arrondi des bords du sélecteur d'heure */
+    margin-top: 10px; /* Marge supérieure pour espacer du calendrier */
+    width: 120px; /* Largeur fixe du sélecteur d'heure */
+    cursor: pointer; /* Curseur en pointeur pour indiquer la possibilité de sélection */
+}
+.form-group {
+    margin-bottom: 15px; /* Ajouter une marge inférieure de 15px entre les groupes de champ */
+}
+
+.form-group label {
+    display: block; /* Afficher les labels comme des blocs pour les rendre alignés verticalement */
+    margin-bottom: 5px; /* Ajouter une marge inférieure de 5px sous chaque label */
+    color: #043343; /* Définir la couleur du texte des labels */
+    font-weight: bold; /* Définir les labels en gras */
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="time"] {
+    width: 100%; /* Définir la largeur des champs à 100% */
+    padding: 10px; /* Ajouter un padding interne de 10px */
+    font-size: 16px; /* Définir la taille de la police à 16px */
+    border: 1px solid #ccc; /* Ajouter une bordure grise */
+    border-radius: 5px; /* Arrondir les bords des champs */
+    box-sizing: border-box; /* Inclure la bordure et le padding dans la largeur */
+    transition: border-color 0.3s ease; /* Ajouter une transition pour l'effet de survol */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="time"]:focus {
+    outline: none; /* Supprimer le focus par défaut */
+    border-color: #043343; /* Changer la couleur de la bordure au focus */
+}
+button[type="submit"] {
+    background-color: #043343; /* Définir une couleur de fond pour le bouton */
+    color: #fff; /* Définir la couleur du texte du bouton */
+    font-size: 18px; /* Définir la taille de la police du bouton */
+    padding: 12px 30px; /* Ajouter un padding interne de 12px en haut et en bas, et 30px à gauche et à droite */
+    border: none; /* Supprimer la bordure du bouton */
+    border-radius: 5px; /* Arrondir les bords du bouton */
+    cursor: pointer; /* Changer le curseur en pointeur au survol */
+    transition: background-color 0.3s ease; /* Ajouter une transition pour l'effet de survol */
+}
+
+button[type="submit"]:hover {
+    background-color: #065576; /* Changer la couleur de fond lors du survol */
+}
